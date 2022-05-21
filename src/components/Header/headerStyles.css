@@ -1,0 +1,51 @@
+ul.menu {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  list-style: none;
+}
+  
+li.menu-item {
+  flex: 1 0 auto;
+  padding: 10px;
+  margin: 2px;
+  background-color: lightslategray;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+  
+li.menu-item:hover {
+  background-color: #6f48eb;
+  color:#fff;
+}
+  
+button.hamburger {
+  display: none;
+  padding: 10px;
+  margin: 2px;
+  background-color: grey;
+  
+}
+@media screen and (max-width : 760px) {
+  ul.menu {
+    flex-direction: column;
+    display: none;
+    
+  }
+  li.menu-item {
+    background-color: orange
+  }
+
+  button.hamburger{
+    display: block;
+    position: absolute
+  }
+  
+  button.hamburger:focus + ul.menu {
+    display: flex
+  }
+
+}
